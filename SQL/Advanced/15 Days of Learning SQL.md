@@ -4,7 +4,7 @@ Q.
 
 매일 최소 1개 SUBMISSION을 만든 HACKER를 출력해라.
 
-각 날별로 참여한 HACKER의 수, SUBMISSION을 가장 많이 만든 해커의 HACKER_ID, NAME.
+각 날별로 연속적으로 참여중인 HACKER의 수, SUBMISSION을 가장 많이 만든 해커의 HACKER_ID, NAME.
 
 만약 2명 이상이면 HACKER_ID를 오름차순으로 정렬해라.
 
