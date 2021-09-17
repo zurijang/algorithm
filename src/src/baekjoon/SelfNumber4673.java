@@ -1,6 +1,6 @@
 package baekjoon;
 
-public class SelfNumber_4673 {
+public class SelfNumber4673 {
 
     public static int SelfNum(int num) {
 
