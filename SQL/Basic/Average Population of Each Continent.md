@@ -1,0 +1,46 @@
+Q.
+
+Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+
+<strong>CITY</strong>
+|Field|Type|
+|------|-----|
+|ID|NUMBER|
+|NAME|VARCHAR2(17)|
+|COUNTRYCODE|VARCHAR2(3)|
+|DISTRICT|VARCHAR2(20)|
+|POPULATION|NUMBER|
+<br>
+
+<strong>COUNTRY</strong>
+|Field|Type|
+|------|-----|
+|CODE|VARCHAR2(3)|
+|NAME|VARCAHR2(44)|
+CONTINENT|VARCHAR2(13)|
+REGION|VARCHAR2(25)|
+|SURFACEAREA|NUMBER|
+|INDEPYEAR|VARCHAR2(5)|
+POPULATION|NUMBER|
+|LIFEEXPECTANCY|VARCHAR2(4)|
+|GNP|NUMBER|
+|GNPOLD|VARHCAR2(9)|
+|LOCALNAME|VARCHAR2(44)|
+|GOVERNMENTFORM|VARCHAR2(44)|
+|HEADOFSTATE|VARCHAR2(32)|
+|CAPITAL|VARCHAR2(4)|
+|CODE2|VARCHAR2(2)|
+
+A.
+
+```SQL
+SELECT
+    COUNTRY.CONTINENT, 
+    FLOOR(AVG(CITY.POPULATION))
+FROM CITY
+INNER JOIN COUNTRY
+ON CITY.COUNTRYCODE = COUNTRY.CODE
+GROUP BY COUNTRY.CONTINENT;
+```
+
+CONTINENT에 대한 값을 기준으로 평균 인구를 반올림한 값을 구한다. GROUP BY 로 CONTINENT를 기준으로 잡아주고 반올림 함수 FLOOR와 평균 함수 AVG에 POPULATION 값을 넣었다.
